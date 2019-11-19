@@ -1,5 +1,6 @@
 .composition {
     position: relative;
+
     &__photo {
         width: 55%;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
@@ -9,6 +10,13 @@
         -ms-border-radius: 2px;
         -o-border-radius: 2px;
         position: absolute;
+        z-index: 10;
+        transition: all .2s;
+        -webkit-transition: all .2s;
+        -moz-transition: all .2s;
+        -ms-transition: all .2s;
+        -o-transition: all .2s;
+        outline-offset: 2rem;
 
         &--p1 {
             left: 0;
@@ -24,5 +32,24 @@
             left: 20%;
             top: 10rem;
         }
+
+        &:hover {
+            outline: 1.5rem solid $color-primary;
+            transform: scale(1.05) translateY(-5px);
+            -webkit-transform: scale(1.05) translateY(-5px);
+            -moz-transform: scale(1.05) translateY(-5px);
+            -ms-transform: scale(1.05) translateY(-5px);
+            -o-transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+            z-index: 20;
+}
     }
+
+    &:hover &__photo:not(:hover) {
+        transform: scale(.95);
+        -webkit-transform: scale(.95);
+        -moz-transform: scale(.95);
+        -ms-transform: scale(.95);
+        -o-transform: scale(.95);
+}
 }
