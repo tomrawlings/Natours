@@ -14,6 +14,7 @@ $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
 
 $color-grey-dark: #777;
+$color-grey-dark-2: #999;
 $color-white: #fff;
 $color-black: #000;
 
@@ -31,3 +32,7 @@ $shadow-medium-large: 0 1.5rem 4rem rgba($color-black, .4);
 $shadow-small: 0 1rem 2rem rgba($color-black, .2);
 $shadow-x-small: 0 .5rem .1rem rgba($color-black, .2);
 $shadow-large: 0 2.5rem 4rem rgba($color-black, .5);
+
+// Border
+$border-radius-small: 3px;
+$border-radius-x-small: 2px;
