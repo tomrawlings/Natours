@@ -3,8 +3,7 @@ body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     line-height: 1.7;
-    color: $color-grey-dark;
-    padding: 3rem;
+    color: $color-grey-dark;    
 }
 
 .heading-primary{
@@ -21,7 +20,12 @@ body {
         letter-spacing: 3.5rem;
         
         animation: moveInLeft 1s ease-out;
-        -webkit-animation: moveInLeft 1s ease-out;    
+        -webkit-animation: moveInLeft 1s ease-out;  
+        
+        @include respond(phone){
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
     }
     
     &--sub{
@@ -32,6 +36,10 @@ body {
         
         animation: moveInRight 1s ease-out;
         -webkit-animation: moveInRight 1s ease-out;
+
+        @include respond(phone){
+            letter-spacing: .5rem;
+        }
     }
 }
 
@@ -51,6 +59,14 @@ body {
     -moz-transition: all .2s;
     -ms-transition: all .2s;
     -o-transition: all .2s;
+
+    @include respond(tab-port){
+        font-size: 3rem;
+    }
+
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
     
     &:hover {
         transform: skewY(2deg) skewX(15deg) scale(1.1);
